@@ -1,0 +1,35 @@
+
+li:not(:last-child){
+  article.post-item{
+    border-bottom: 2px solid black;
+  }
+}
+
+article.post-item{
+  min-height: 100px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+
+  time.posted-date{
+    width: 50px;
+    float: left;
+    line-height: 1.5;
+    color: gray;
+    text-transform: uppercase;
+  }
+  .post-intro{
+    margin-left: 55px;
+    .post-title{
+      font-family: Arvo;
+      color: black;
+      font-size: 34px; 
+      display:block;
+      margin-bottom: 10px;
+    }
+    .post-preview{
+      font-family: Oxygen;
+      padding-top: 10px;
+      font-size: 24px;
+    }
+  }
+}

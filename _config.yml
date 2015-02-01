@@ -1,12 +1,17 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: lyc4n.IO
+email: canariasnorly@yahoo.com
+description: ""
+
+hello: "I'm <a href='/me' class='white'><b>Norly Canarias</b></a>, a Web Developer specializing Ruby on Rails. I'm a member of Gaiax Asia <a class='white' href='http://www.calecale.com/'>CaleCale</a> Online Calendar development team"
+
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://www.github.com/lyc4n.io"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+gems: [bourbon]
+
+sass:
+  sass_dir: assets/css

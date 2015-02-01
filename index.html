@@ -1,20 +1,23 @@
 ---
-layout: default
+layout: site
 ---
-
-<div class="home">
-
-  <h1>Posts</h1>
-
+<div class="rss-subscribe align-right"><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="black">Subscribe <i class="fa fa-rss black"></i></a></div>
+<div class="blog-list">
   <ul class="posts">
     {% for post in site.posts %}
       <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <article class="post-item">
+          <time class="posted-date" datetime="">
+            {{ post.date | date: "%b"}}
+            <br>
+            <span>{{ post.date | date: "%d" }}</span>
+          </time>
+          <div class="post-intro">
+            <a class="post-link post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <span class="post-preview">{{ post.content | strip_html | truncatewords:30 }}</span>
+          </div>
+        </article>
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>

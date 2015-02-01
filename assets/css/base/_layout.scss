@@ -1,0 +1,59 @@
+
+body{
+  position:relative;
+  main{
+    min-height:400px;
+    padding-bottom: 120px;
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height:120px;
+  background:black;
+  color: white;
+
+  .me{
+    padding: 20px 0px 15px 20px;
+
+    .avatar{
+      float: left;
+    }
+
+    .about{
+      float: left;
+      padding-left: 5px;
+      width: 400px;
+    }
+  }
+
+  ul.online-pages{
+    margin: 15px 0px 0px 95px;
+  }
+
+  img.social-icon{
+    height: 19px;
+    width: 19px;
+    padding: 0px 5px 0px 5px;
+  }
+}
+
+header.site-header{
+  background: url('../../imgs/banner-img.jpg') center center;
+  background-size:cover;
+  height:160px;
+  color: #fff;
+
+  .site-title{
+    font-size: 50px;
+    font-family: $banner-font;
+    letter-spacing:0.2em;
+    text-align:center; 
+    color: black;
+    text-shadow: 2px -3px 5px white;
+  }
+}
+

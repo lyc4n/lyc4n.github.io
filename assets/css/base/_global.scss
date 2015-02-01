@@ -1,0 +1,78 @@
+html{
+  height: 100%;
+}
+
+body{
+  min-height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p{
+  margin:0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration:none;
+  &:hover{
+    text-decoration:none;
+  }
+}
+
+//====================
+// Utility classes
+//====================
+
+.white{
+  color: white !important;
+}
+
+.black{
+  color: black !important;
+}
+
+.box-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.relative-wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.no-padding{ 
+  padding: 0 0 0 0 !important;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.align-right{
+  text-align: right;
+}
+.clearfix{
+  clear: both;
+}
+
+.small-text-size{
+  font-size: 14px;
+}
+
+.inline-list > li{
+  display: inline-block;
+}
+
+.clearleft{
+  clear: left;
+}
+
+.viewport-height{
+  height: 100vh !important;
+}
