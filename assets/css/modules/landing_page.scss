@@ -17,15 +17,16 @@ section.main-section{
   }
 
   ul.action-list{
-    height: 100px;
+    height: auto;
     width: 100%;
   }
   li.action-list-item{
     margin-left: 5px;
     overflow: hidden;
     display: inline-block;
-    width: 20%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     background: black;
     a{
       display: block;
@@ -53,7 +54,7 @@ section.main-section.shoutout-section{
 }
 
 section.main-section.action-list-section{
-  height: 300px;
+  height: 500px;
   background: url("/assets/imgs/swirl_pattern.png")
 }
 

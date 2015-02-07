@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     {% include banner.html %}
-    <main class="page-content">
+    <main class="page-content {% if page.title != "me" %} box {% endif %}">
       {{ content }}
     </main>
     {% include footer.html %}

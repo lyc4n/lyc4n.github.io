@@ -12,14 +12,15 @@ footer{
   bottom: 0px;
   left: 0px;
   right: 0px;
-  height:120px;
+  min-height:120px;
   background:black;
   color: white;
 
   .me{
-    padding: 20px 0px 15px 20px;
+    padding: 20px 0px 0px 20px;
 
     .avatar{
+      border-radius: 50%;
       float: left;
     }
 
@@ -30,10 +31,6 @@ footer{
     }
   }
 
-  ul.online-pages{
-    margin: 15px 0px 0px 95px;
-  }
-
   img.social-icon{
     height: 19px;
     width: 19px;
@@ -42,7 +39,7 @@ footer{
 }
 
 header.site-header{
-  background: url('../../imgs/banner-img.jpg') center center;
+  background: url('../imgs/banner-img.jpg') center center;
   background-size:cover;
   height:160px;
   color: #fff;
@@ -57,3 +54,27 @@ header.site-header{
   }
 }
 
+
+@media(max-width: $screen-mobile-max) {
+  .page-content{
+    padding-bottom: 200px;
+  }
+
+  footer .avatar, footer .about{
+    float: none !important;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  footer ul.online-pages{
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+  footer .about{
+    paddgin: 0px;
+    width: 80% !important;
+    text-align: center;
+  }
+}

@@ -1,14 +1,15 @@
 ---
 layout: site
 ---
-<div class="article-view">
-
-  <header class="post-header align-center">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="meta small-text-size">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+<div class="blog box-item">
+  <header class="blog-header">
+    <h1 class="blog-title">{{ page.title }}</h1>
+    <p class="meta small-text-size">
+      <i>{{ page.date | date: "%B %-d, %Y" }}</i>
+    </p>
   </header>
 
-  <article class="post-content">
+  <article class="blog-content">
   {{ content }}
   </article>
 </div>

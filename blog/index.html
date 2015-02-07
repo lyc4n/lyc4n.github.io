@@ -1,0 +1,33 @@
+---
+layout: site
+---
+<div class="rss-subscribe align-right box-item">
+  <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i
+      class="fa fa-rss white"></i></a>
+</div>
+
+<div class="box-item">
+  <ul class="blog-posts">
+    {% for post in site.posts %}
+      <li>
+        <article class="blog-item">
+          <time class="birthdate mobile-hidden" datetime="">
+            <span class="month align-center">{{ post.date | date: "%b"}}</span>
+            <span class="day align-center">{{ post.date | date: "%d" }}</span>
+          </time>
+          <div class="blog-info">
+            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+              <i class="fa fa-arrow-circle-right"></i>
+            </a>
+            <p class="alt-birthdate small-text-size">
+              <time>
+                <i>{{ post.date | date: "%B %d, %Y"}}</i>
+              </time>
+            </p>
+            <span class="content-preview">{{ post.content | strip_html | truncatewords:30 }}</span>
+          </div>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
