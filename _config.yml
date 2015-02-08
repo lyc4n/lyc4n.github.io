@@ -11,7 +11,6 @@ url: "https://www.github.com/lyc4n.io"
 # Build settings
 markdown: kramdown
 permalink: pretty
-gems: [bourbon]
 
 sass:
   sass_dir: assets/css
