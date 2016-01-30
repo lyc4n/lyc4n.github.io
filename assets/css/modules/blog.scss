@@ -29,12 +29,19 @@ Blog list view
     margin-left: 50px;
   }
   > .blog-info > .title{
-    display: block;
+    display: table;
     margin-top: 5px;
     font-family: $heading-font;
     color: black;
     font-weight: bolder;
     font-size: 32px;
+
+    > .fa{
+      display: table-cell;
+      font-size: 20px;
+      padding-left: 10px;
+      vertical-align: middle;
+    }
   }
 
   > .blog-info > .title > i{
@@ -81,8 +88,12 @@ Blog page view
 */
 
 .blog{
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
   margin-top: 20px;
   padding-bottom: 50px;
+
   > .blog-header{
     margin-bottom: 50px;
   }
@@ -91,5 +102,14 @@ Blog page view
     font-family: $heading-font;
     display: inline-block;
     margin: auto;
+  }
+
+  > .blog-content p {
+    margin-bottom: 20px;
+  }
+
+  > .blog-content h3 {
+    margin-bottom: 10px;
+    font-family: $heading-font;
   }
 }

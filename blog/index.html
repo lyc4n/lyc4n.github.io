@@ -8,7 +8,7 @@ layout: site
 
 <div class="box-item">
   <ul class="blog-posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <article class="blog-item">
           <time class="birthdate mobile-hidden" datetime="">
@@ -30,4 +30,13 @@ layout: site
       </li>
     {% endfor %}
   </ul>
+
+  {% if paginator.total_pages > 1 %}
+    {% if paginator.previous_page %}
+      <a class="pull-left" href="{{ paginator.previous_page_path }}">&larr; Prev</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a class="pull-right" href="{{ paginator.next_page_path }}">Next &rarr;</a>
+    {% endif %}
+  {% endif %}
 </div>

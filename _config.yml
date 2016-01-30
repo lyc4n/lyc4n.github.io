@@ -2,15 +2,18 @@
 title: LYC4N.IO
 email: canariasnorly@yahoo.com
 description: ""
-
-hello: "I'm <a href='/me' class='white'><b>Norly Canarias</b></a>, a Web Developer specializing Ruby on Rails. I'm a member of Gaiax Asia <a class='white' href='http://www.calecale.com/'>CaleCale</a> Online Calendar development team"
-
+hello: "Hi! I'm <a href='/me' class='white'><b>Norly Canarias</b></a>, a Web Developer specializing Ruby on Rails and looking forward to explore Node.js!"
 baseurl: ""
 url: "https://www.github.com/lyc4n.io"
 
 # Build settings
 markdown: kramdown
 permalink: pretty
-
 sass:
   sass_dir: assets/css
+collections:
+  cheatsheets:
+    output: true
+    permalink: /cheatsheets/:path/
+paginate: 2
+paginate_path: "blog/page:num"
