@@ -1,4 +1,4 @@
 ---
 layout: cheatsheet
-title: Ubuntu Cheatsheet
+title: Rspec Cheatsheet
 ---

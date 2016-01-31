@@ -1,6 +1,11 @@
 ---
 title: My Cheatsheets
-layout: post
+layout: cheatsheet
 ---
-
-<h1>Cheatsheets here</h1>
+<ul>
+  {% for cheatsheet in site.cheatsheets%}
+    <li>
+      <a href="{{ cheatsheet.url }}">{{ cheatsheet.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

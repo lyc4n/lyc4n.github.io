@@ -141,4 +141,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 43)
+  jekyll-gist
+  jemoji
   json

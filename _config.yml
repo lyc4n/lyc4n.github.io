@@ -10,6 +10,7 @@ url: "https://www.github.com/lyc4n.io"
 markdown: kramdown
 permalink: pretty
 sass:
+  style: compressed
   sass_dir: assets/css
 collections:
   cheatsheets:
@@ -17,3 +18,8 @@ collections:
     permalink: /cheatsheets/:path/
 paginate: 2
 paginate_path: "blog/page:num"
+gems:
+  - jekyll-gist
+  - jemoji
+gist:
+  noscript: false
