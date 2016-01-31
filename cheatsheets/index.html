@@ -2,10 +2,12 @@
 title: My Cheatsheets
 layout: cheatsheet
 ---
-<ul>
-  {% for cheatsheet in site.cheatsheets%}
-    <li>
-      <a href="{{ cheatsheet.url }}">{{ cheatsheet.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<main class="page-content box">
+  <ul class="cheatsheet-list">
+    {% for cheatsheet in site.cheatsheets%}
+      <li class="cheatsheet-list-item">
+        <a href="{{ cheatsheet.url }}">{{ cheatsheet.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</main>

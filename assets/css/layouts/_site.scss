@@ -61,10 +61,15 @@ header.site-header{
   }
 }
 
-
 @media(max-width: $screen-mobile-max) {
   .page-content{
     padding-bottom: 200px;
+  }
+
+  .site-title > span.site-subtitle{
+    margin-left: -50px;
+    position: absolute;
+    top: 37px;
   }
 
   footer .avatar, footer .about{
