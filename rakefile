@@ -1,0 +1,22 @@
+
+
+desc "Creates a new article with current date, saves it to draft, and open in vim(rake new_artitle title='Forbidden Code')"
+task :new_article do
+  dir = "_drafts"
+
+  original_title = (ARGV[1..-1].join(" ") || "Untitled")
+  title = original_title.downcase.gsub(" ", "-")
+  title = "#{Time.now.strftime('%Y-%m-%d')}-#{title}.md"
+
+  post_path = "./#{dir}/#{title}"
+  File.open post_path, "w"  do |post|
+    post.puts("---")
+    post.puts("layout: post")
+    post.puts("title: #{original_title}")
+    post.puts("---")
+  end
+
+  puts "Opening #{post_path}"
+  task :default => :spec
+  system('vim', post_path)
+end
