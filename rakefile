@@ -17,6 +17,5 @@ task :new_article do
   end
 
   puts "Opening #{post_path}"
-  task :default => :spec
   system('vim', post_path)
 end
