@@ -53,13 +53,12 @@ Given that we have a Rails project with the image directory of `app/images/hero-
 
 <br>
 
+
 ---
 
 <sub>
 <sup>
   Notes:
-  <br>
-  - Only .png images are supported in the mentioned spriting method above
   <br>
   - Only .png images are supported in the mentioned spriting method above
 </sup>

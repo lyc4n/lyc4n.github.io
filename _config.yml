@@ -16,7 +16,7 @@ collections:
   cheatsheets:
     output: true
     permalink: /cheatsheets/:path/
-paginate: 2
+paginate: 15
 paginate_path: "blog/page:num"
 gems:
   - jekyll-gist
