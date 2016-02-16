@@ -102,6 +102,9 @@ Blog page view
     font-family: $heading-font;
     display: inline-block;
     margin: auto;
+    padding-bottom: 20px;
+    text-align: left;
+    line-height: 1;
   }
 
   > .blog-content p {
