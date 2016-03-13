@@ -1,6 +1,6 @@
 
 
-desc "Creates a new article with current date, saves it to draft, and open in vim(rake new_artitle title='Forbidden Code')"
+desc "Creates a new article with current date, saves it to draft, and open in vim(rake new_artitle Forbidden Code)"
 task :new_article do
   dir = "_drafts"
 

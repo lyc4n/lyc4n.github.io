@@ -94,6 +94,11 @@ Blog page view
   margin-top: 20px;
   padding-bottom: 50px;
 
+  img:not(.emoji){
+    margin: auto;
+    display: block;
+  }
+
   > .blog-header{
     margin-bottom: 50px;
   }

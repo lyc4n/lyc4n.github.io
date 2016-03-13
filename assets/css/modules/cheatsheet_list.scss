@@ -1,32 +1,54 @@
+
 ul.cheatsheet-list{
   margin-top: 40px;
-  padding-top: 70px;
-  background: linear-gradient(#eee, white);
-  box-shadow: 5px 0px 8px black;
+  padding: 100px 20px 40px 20px;
+  background: none;
+  border: none;
+  position: relative;
+}
+
+.cheatsheet-list-title{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 30px;
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 li.cheatsheet-list-item{
-  display: table-cell;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  a{
-    text-align: center;
-    font-size: 32px;
-    font-family: $heading-font;
-    color: black;
-    text-decoration: none;
-    width: 100%;
-    transition: color 0.3s ease
-  }
+  text-align: center;
 }
-li.cheatsheet-list-item{
-  border-top: 1px solid blue;
+
+li.cheatsheet-list-item a{
+  font-weight: bolder;
 }
-li.cheatsheet-list-item:last-child{
-  border-bottom: 1px solid blue;
+
+li.cheatsheet-list-item a,
+li.cheatsheet-list-item a:visited{
+  color: black;
 }
 
 li.cheatsheet-list-item a:hover{
   color: red;
+}
+
+.cheatsheet-list-item-icon{
+  float: left;
+}
+
+
+@media(min-width: $screen-normal-min) {
+  ul.cheatsheet-list{
+    background: linear-gradient(#eee, white);
+    box-shadow: 0px 0px 1px black;
+    border-radius: 10px;
+  }
+
+  li.cheatsheet-list-item{
+    float: left;
+    display: inline-block;
+    width: 50%;
+  }
 }

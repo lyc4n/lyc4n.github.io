@@ -2,12 +2,21 @@
 title: My Cheatsheets
 layout: cheatsheet
 ---
-<main class="page-content box">
-  <ul class="cheatsheet-list">
-    {% for cheatsheet in site.cheatsheets%}
-      <li class="cheatsheet-list-item">
-        <a href="{{ cheatsheet.url }}">{{ cheatsheet.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</main>
+<ul class="cheatsheet-list">
+  <li class="cheatsheet-list-title">~ Cheatsheets ~</li>
+  {% for cheatsheet in site.cheatsheets%}
+    <li class="cheatsheet-list-item">
+      <a href="{{ cheatsheet.url }}">
+        {{ cheatsheet.title }}
+        <i class="fa fa-bolt cheatsheet-list-item-icon">...</i>
+      </a>
+    </li>
+  {% endfor %}
+  <div class="clearfix"></div>
+</ul>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+    document.getElementsByClassName("page-content")[0].classList.add("box");
+  });
+</script>
