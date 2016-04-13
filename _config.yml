@@ -22,5 +22,6 @@ gems:
   - jekyll-gist
   - jemoji
   - jekyll-paginate
+  - jekyll-mentions
 gist:
   noscript: false

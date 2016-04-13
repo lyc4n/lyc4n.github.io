@@ -1,10 +1,9 @@
-
-
 desc "Creates a new article with current date, saves it to draft, and open in vim(rake new_artitle Forbidden Code)"
 task :new_article do
-  dir = "_drafts"
+  use_publish_dir = ARGV.delete("PUB")
+  dir = use_publish_dir ? "_posts" : "_drafts"
 
-  original_title = (ARGV[1..-1].join(" ") || "Untitled")
+  original_title = (ARGV[1..-1].join(" ") || "Untitled").strip
   title = original_title.downcase.gsub(" ", "-")
   title = "#{Time.now.strftime('%Y-%m-%d')}-#{title}.md"
 
