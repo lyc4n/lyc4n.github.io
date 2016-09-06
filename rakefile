@@ -1,7 +1,6 @@
-desc "Creates a new article with current date, saves it to draft, and open in vim(rake new_artitle Forbidden Code)"
+desc "Creates a new article with current date and open in vim(Eg: rake new_artitle Forbidden Code)"
 task :new_article do
-  use_publish_dir = ARGV.delete("PUB")
-  dir = use_publish_dir ? "_posts" : "_drafts"
+  dir = "_posts"
 
   original_title = (ARGV[1..-1].join(" ") || "Untitled").strip
   title = original_title.downcase.gsub(" ", "-")
