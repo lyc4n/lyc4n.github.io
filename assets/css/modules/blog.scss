@@ -69,6 +69,14 @@ Blog list view
   }
 }
 
+.blog-pagination{
+  margin: 20px 0px;
+}
+
+.blog-pagination-prev-link, .blog-pagination-prev-link{
+  color: black;
+}
+
 @media(max-width: $screen-mobile-max) {
   .blog-item > .blog-info{
     margin-left: 0px;
