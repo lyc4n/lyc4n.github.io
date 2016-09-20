@@ -102,6 +102,10 @@ Blog page view
   margin-top: 20px;
   padding-bottom: 50px;
 
+  a{
+    text-decoration: underline;
+  }
+
   img:not(.emoji){
     margin: auto;
     display: block;
@@ -151,5 +155,10 @@ Blog page view
     padding: 2px 2px;
     border-radius: 5px;
     color: violet;
+  }
+
+  figure.highlight{
+    overflow: scroll;
+    border: 1px solid #eee;
   }
 }
