@@ -1,28 +1,29 @@
 <footer>
   {% unless page.title == "me" %}
     <div class="me">
-      <img class="avatar" src="/assets/me.jpg" alt="">
+      {% img me.jpg class:'avatar' alt:'me' %}
+
       <div class="about small-text-size">
         <p>{{ site.hello }}</p>
         <ul class="online-pages inline-list clearleft no-padding">
           <li>
             <a href="http://www.github.com/lyc4n" target="_blank" alt="Test" alt="On github">
-              <img class="social-icon" src="/assets/social/github.png">
+              {% img social/github.png class:'social-icon' %}
             </a>
           </li>
           <li>
             <a href="http://www.twitter.com/leecanarias" target="_blank"  alt="On twitter">
-              <img class="social-icon" src="/assets/social/twitter.png">
+              {% img social/twitter.png class:'social-icon' %}
             </a>
           </li>
           <li>
             <a href="https://plus.google.com/u/0/110185628938156012145" target="_blank" alt="On google plus">
-              <img class="social-icon" src="/assets/social/g+29.png">
+              {% img social/g+29.png class:'social-icon' %}
             </a>
           </li>
           <li>
             <a href="http://www.facebook.com/canariasnorllll" target="_blank" alt="On facebook">
-              <img class="social-icon" src="/assets/social/fb.png">
+              {% img social/fb.png class:'social-icon' %}
             </a>
           </li>
         </ul>
