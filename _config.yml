@@ -23,5 +23,15 @@ gems:
   - jemoji
   - jekyll-paginate
   - jekyll-mentions
+  - jekyll-assets
 gist:
   noscript: false
+assets:
+  compress:
+    css: sass
+    js: uglifier
+  sources:
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets

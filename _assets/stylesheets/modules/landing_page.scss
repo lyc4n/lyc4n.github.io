@@ -1,7 +1,7 @@
 .avatar{
   width: 60px;
   height: auto;
-  border: 5px solid #eee; 
+  border: 5px solid #eee;
 }
 
 section.main-section{
@@ -50,17 +50,17 @@ section.main-section:not(:last-child){
 section.main-section.shoutout-section{
   color: white;
   height: 450px;
-  background: url("/assets/imgs/footer_lodyas.png");
+  background: url(asset_path('footer_lodyas.png'));
 }
 
 section.main-section.action-list-section{
   height: 500px;
-  background: url("/assets/imgs/swirl_pattern.png")
+  background: url(asset_path('swirl_pattern.png'));
 }
 
 section.main-section.about-section{
   height: 300px;
-  background: url("/assets/imgs/congruent_outline.png")
+  background: url(asset_path('congruent_outline.png'));
 }
 
 /*

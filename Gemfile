@@ -7,3 +7,6 @@ gem 'github-pages', versions['github-pages']
 gem 'jekyll-gist'
 gem 'jemoji'
 gem 'jekyll-mentions'
+gem 'jekyll-assets'
+gem 'uglifier'
+gem 'sass'

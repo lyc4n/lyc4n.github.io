@@ -1,3 +1,6 @@
+//= require_tree ./vendor
+//
+
 $(function(){
 
   Linklistify = function(elemSelector, linksSelector, block){
