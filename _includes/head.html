@@ -6,8 +6,9 @@
   <meta name="description" content="{{ site.description }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  {% stylesheet application %}
-  {% javascript application %}
+  <link rel="stylesheet" href="/assets/application.css">
+  <script type="text/javascript" src="/assets/application.js" defer></script>
+
   {% if jekyll.environment == "production" %}
     {% include ga.html %}
   {% endif %}
