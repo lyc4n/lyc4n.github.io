@@ -33,6 +33,11 @@ assets:
   assets:
     - '*.png'
     - '*.jpg'
+    - '*.eot'
+    - '*.svg'
+    - '*.ttf'
+    - '*.woff'
+    - '*.woff2'
   sources:
     - _assets/fonts
     - _assets/images
