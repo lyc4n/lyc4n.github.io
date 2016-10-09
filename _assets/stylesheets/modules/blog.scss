@@ -36,6 +36,10 @@ Blog list view
     font-weight: bolder;
     font-size: 32px;
 
+    img.emoji{
+      margin-top: -12px;
+    }
+
     > .fa{
       display: table-cell;
       font-size: 20px;
@@ -122,6 +126,10 @@ Blog page view
     padding-bottom: 20px;
     text-align: left;
     line-height: 1;
+
+    & > img.emoji{
+      margin-top: -12px;
+    }
   }
 
   > .blog-content p {
