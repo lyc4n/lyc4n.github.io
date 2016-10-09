@@ -5,7 +5,7 @@ require 'jekyll'
 
 GITHUB_REPONAME = 'lyc4n/lyc4n.github.io'
 
-desc "Creates a new article with current date and open in vim(Eg: rake new_artitle Forbidden Code)"
+desc "Creates a new article with current date and open in vim(Eg: rake new_article Forbidden Code)"
 task :new_article do
   dir = "_posts"
 
