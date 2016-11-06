@@ -4,7 +4,7 @@ email: canariasnorly@yahoo.com
 description: "My dev blog and stuffs :]"
 hello: "Hi! I'm <a href='/me' class='white'><b>Norly Canarias</b></a>, a Web Developer specializing Ruby on Rails and looking forward to explore Node.js!"
 baseurl: ""
-url: "https://www.github.com/lyc4n.io"
+url: "https://lyc4n.github.io"
 
 twitter:
   username: leecanarias
