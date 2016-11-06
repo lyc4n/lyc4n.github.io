@@ -7,7 +7,7 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   {% seo %}
-  <meta property="og:image" content="{{ site.baseurl }}{% asset_path 'dubai-buildings.jpg' %}">
+  <meta property="og:image" content="{{ site.url }}/{% asset_path 'dubai-buildings.jpg' %}">
 
   {% stylesheet application %}
   {% javascript application %}
