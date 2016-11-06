@@ -1,10 +1,19 @@
 # Site settings
 title: LYC4N.IO
 email: canariasnorly@yahoo.com
-description: ""
+description: "My dev blog and stuffs :]"
 hello: "Hi! I'm <a href='/me' class='white'><b>Norly Canarias</b></a>, a Web Developer specializing Ruby on Rails and looking forward to explore Node.js!"
 baseurl: ""
 url: "https://www.github.com/lyc4n.io"
+
+twitter:
+  username: leecanarias
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/dubai-buildings.jpg"
 
 # Build settings
 markdown: kramdown
@@ -24,6 +33,7 @@ gems:
   - jekyll-paginate
   - jekyll-mentions
   - jekyll-assets
+  - jekyll-seo-tag
 gist:
   noscript: false
 assets:
