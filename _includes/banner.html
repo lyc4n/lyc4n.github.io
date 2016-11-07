@@ -1,9 +1,24 @@
 <header class="site-header {% if page.title == "me" %}viewport-height{% endif %}">
   <div class="relative-wrapper">
+    <nav class="site-menu-container">
+      <ul class="site-menu">
+        <li class="site-menu-item">
+          <a class='site-menu-item-link' href='/'>Blog</a></li>
+        <li class="site-menu-item">
+          <a class='site-menu-item-link' href='/cheatsheets'>Cheatsheets</a></li>
+        <li class="site-menu-item">
+          <a class='site-menu-item-link' href='/me'>Me</a></li>
+        <li class="site-menu-item">
+          <a class='site-menu-item-link' href='#'>Tic-tac</a></li>
+      </ul>
+
+    </nav>
     <a href="/">
         <h1 class="site-title box-center">
           LYC4N.IO
-          <span class='site-subtitle'>{{ include.subtitle }}</span>
+          {% if include.subtitle %}
+            <span class='site-subtitle'>{{ include.subtitle }}</span>
+          {% endif %}
         </h1>
     </a>
   </div>

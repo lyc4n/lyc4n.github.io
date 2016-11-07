@@ -1,0 +1,29 @@
+.site-menu-container{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 18px;
+  background: rgba(255,255,255, 0.3);
+
+  ul.site-menu{
+    margin: 0px;
+  }
+  li.site-menu-item:first-child{
+    padding-left: 5px;
+  }
+  li.site-menu-item{
+    display: inline;
+  }
+  li.site-menu-item:not(:first-child):before{
+    content: '~';
+    color: #909090;
+  }
+  a.site-menu-item-link{
+    color: black;
+    text-transform: lowercase;
+  }
+
+  a.site-menu-item-link{
+    margin: 0px 3px;
+  }
+}
