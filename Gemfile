@@ -7,6 +7,7 @@ gem 'github-pages', versions['github-pages']
 
 gem 'uglifier'
 gem 'sass'
+gem 'sprockets-es6'
 
 group :jekyll_plugins do
   gem 'jekyll-gist'

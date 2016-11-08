@@ -58,3 +58,4 @@ exclude:
   - Gemfile.lock
   - rakefile
   - .gitignore
+port: 3000
