@@ -1,6 +1,7 @@
 ---
 layout: post
 title: More organized Constant storage in Ruby
+tags: [constant, ruby]
 ---
 
 Probably when you create an ActiveRecord model you would also have the need to

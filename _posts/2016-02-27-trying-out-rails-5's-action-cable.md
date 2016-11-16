@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Trying out Rails 5's Action Cable
+tags: [action-cable, rails, rails-5]
 ---
 
 Rails 5 has been on Beta since the last part of December 2015 and right now the

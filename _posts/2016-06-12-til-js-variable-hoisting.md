@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'TIL: Variable Hoisting - Terminology'
+tags: [javascript, til]
 ---
 
 Been developing for quite sometime in the web but it is just today that I

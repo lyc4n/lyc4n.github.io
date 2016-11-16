@@ -75,6 +75,8 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-archives (2.1.1)
+      jekyll (>= 2.4)
     jekyll-assets (2.2.8)
       extras (~> 0.1)
       fastimage (~> 2.0, >= 1.8)
@@ -166,6 +168,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 104)
+  jekyll-archives
   jekyll-assets
   jekyll-gist
   jekyll-mentions

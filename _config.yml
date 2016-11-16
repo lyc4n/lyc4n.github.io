@@ -36,6 +36,20 @@ gems:
   - jekyll-seo-tag
 gist:
   noscript: false
+jekyll-archives:
+  enabled: all
+  enabled:
+    - month
+    - tags
+  layouts:
+    month: month-archive
+    tag: tag-archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 assets:
   compress:
     css: sass

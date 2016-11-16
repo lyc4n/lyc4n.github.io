@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'TIL: Running jekyll app in C9 IDE'
+tags: [c9, jekyll]
 ---
 
 Today I tried to use c9 ide and discovered that it does not automatically run jekyll applications.

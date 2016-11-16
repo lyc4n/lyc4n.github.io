@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'TIL: Coalesce in MySQL'
+tags: [mysql]
 ---
 
 If you look up the word **Coalesce** in the dictionary you would see the

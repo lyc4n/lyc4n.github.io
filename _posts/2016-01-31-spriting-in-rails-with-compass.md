@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSS Spriting in Rails with Compass
+tags: [css, rails, sprite]
 ---
 
 Common websites use multiple images which also

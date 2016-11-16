@@ -1,6 +1,7 @@
 ---
 layout: post
 title: We set our limits
+tags: [self]
 ---
 
 A little over three years ago I graduated from college and applied for a job as a Programmer.

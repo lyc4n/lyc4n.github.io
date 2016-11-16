@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using AR after_initialize for the first time
+tags: [activerecord, rails, after_initialize]
 ---
 
 So I have been using Rails for quite some time but it was only today that I get

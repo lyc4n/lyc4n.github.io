@@ -1,28 +1,19 @@
 Tictac = window.App.Components.Tictac
+window.LifeTimer = LifeTimer
 
 class LifeTimer{
-  constructor(dob, yearsOfExistence = 98){
+  constructor(dob, targetYearsOfExistence = 98){
     this.dob = moment(dob) // 'yyyy-mm-dd'
-    this.dod = this.dob.clone().add(yearsOfExistence, 'y')
+    this.dod = this.dob.clone().add(targetYearsOfExistence, 'y')
   }
 
-  runningLog(){
-    setInterval(
-      () => this.logRemaining(),
-      1000
-    )
-  }
-
-  logRemaining(){
-    remainingSeconds = this.dod.diff(moment(), 'seconds')
-    console.log(`You have ${remainingSeconds} seconds left to live. Make the most out of it!`)
+  remaining(){
+    return(this.remainingSeconds = this.dod.diff(moment(), 'seconds'))
   }
 }
-
-window.LifeTimer = LifeTimer
 
 $(function(){
   main = document.getElementById('tic_tac-content')
   if(!main) return
-  ReactDOM.render(<Tictac />, main)
+  ReactDOM.render(<Tictac lifeTimer={new LifeTimer('1993-10-20')} />, main)
 })

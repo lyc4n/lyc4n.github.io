@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'TIL: Converting to Boolean in ActiveRecord'
+tags: [activerecord]
 ---
 
 Every once in a while there is a need to pass string representations of boolean in Rails.

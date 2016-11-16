@@ -169,4 +169,21 @@ Blog page view
     overflow: auto;
     border: 1px solid #eee;
   }
+
+  .blog-tag-section{
+    padding: 10px 0px;
+    margin-top: 100px;
+  }
+
+  .blog-tag-list-item{
+    margin: 0px;
+    display: inline-block;
+  }
+
+  .blog-tag-list-item-link{
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 10px;
+  }
 }

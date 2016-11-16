@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Uploading file in controller spec
+tags: [rails, rspec, file-upload]
 ---
 
 Here is how to create an uploaded file in your Rails' controller spec;

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Be retina ready with media query
+tags: [css, media_query, retina]
 ---
 
 Apple used the term retina display for their devices that renders with very high

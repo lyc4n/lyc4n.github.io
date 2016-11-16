@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Optimizing Images
+tags: [image, optimization]
 ---
 
 When building a web app we cannot deny the fact that there would be need to

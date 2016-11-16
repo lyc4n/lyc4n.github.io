@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Default hash value mutated unexpectedly!
+tags: [hash, ruby]
 ---
 
 Ruby provided us ability to set a default value in it's Hash class like:

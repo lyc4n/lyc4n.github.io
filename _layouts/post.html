@@ -12,4 +12,18 @@ layout: site
   <article class="blog-content">
   {{ content }}
   </article>
+  {% if page.tags.size != 0 %}
+    <section class='blog-tag-section'>
+      <p>Tags:</p>
+      <ul class='blog-tag-list'>
+        {% for tag in page.tags %}
+          <li class='blog-tag-list-item'>
+            <a class='blog-tag-list-item-link' target='_blank' href="/tag/{{ tag | slugify }}">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="clearfix"></div>
+    </section>
+  {% endif %}
+
 </div>

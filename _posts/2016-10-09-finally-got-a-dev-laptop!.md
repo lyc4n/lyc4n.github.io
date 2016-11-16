@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Thinkpad T430 :heart:'
+tags: [machine, laptop, thinkpad, ubuntu]
 ---
 
 Finally got a dev laptop! :computer: :sunglasses: :coffee:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'TIL: Auto link Rails gem'
+tags: [autolink, rails, gem]
 ---
 
 The team changed rule on what must be stored on a specific column. We used to store just a single url which we output as a link on the view. Now it is allowed to store combination of plain texts and urls. And all urls have to display as a link in the views.

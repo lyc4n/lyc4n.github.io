@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'TIL: atob and btoa functions in JS'
+tags: [javascript, encoding, decoding]
 ---
 
 I came across a JS code like this (not the exact code):

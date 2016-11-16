@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Resolution for 2016
+tags: update
 ---
 
 This github.io page of mine has been stucked for so long until today!

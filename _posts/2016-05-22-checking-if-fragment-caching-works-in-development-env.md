@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Checking if fragment caching works in development env
+tags: [caching, rails, fragment-caching]
 ---
 
 Lets say we have the following
