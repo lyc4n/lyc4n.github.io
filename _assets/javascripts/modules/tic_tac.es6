@@ -17,3 +17,5 @@ $(function(){
   if(!main) return
   ReactDOM.render(<Tictac lifeTimer={new LifeTimer('1993-10-20')} />, main)
 })
+
+

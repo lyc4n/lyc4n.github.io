@@ -5,7 +5,7 @@ title: Ubuntu Cheatsheet
 
 # Ubuntu Cheatsheet
 
-##Install and Uninstall Package
+## Install and Uninstall Package
 
 ---
 
