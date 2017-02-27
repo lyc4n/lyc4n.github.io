@@ -5,6 +5,27 @@
     border-bottom: 3px solid #eee;
   }
 
+  ul:not(.linklistify){
+    list-style-type: disc;
+    padding-left: 15px;
+  }
+
+  h2 + hr{
+    margin-bottom: 25px;
+  }
+
+  hr + p{
+    margin-bottom: 25px;
+  }
+
+  .gist{
+    margin-top: 15px;
+  }
+
+  .gist + h3{
+    margin-top: 20px;
+  }
+
   footer{
     background: linear-gradient(white, rgba(21, 18, 18, 0.37));
   }
