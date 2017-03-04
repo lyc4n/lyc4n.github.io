@@ -1,0 +1,26 @@
+.archives-container{
+  padding-top: 50px;
+}
+
+.tag-archives-label{
+  border-bottom: 1px solid black;
+}
+
+.archives-list{
+  margin-top: 30px !important;
+}
+.archives-list-item{
+  padding: 5px 0px 5px 0px;
+  .post-date{
+    display: inline-block;
+    width: 110px;
+    text-align: left;
+  }
+
+  .post-link:link{
+    color: black;
+  }
+  .post-link{
+    font-weight: bolder;
+  }
+}
