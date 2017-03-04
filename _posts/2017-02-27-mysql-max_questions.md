@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MySQL max_questions
-tags: dev
+tags: [dev, mysql, rails]
 ---
 
 This past week I learned about MySQL `max_question` which is the maximum number of
