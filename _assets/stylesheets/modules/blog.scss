@@ -112,6 +112,7 @@ Blog page view
   }
 
   img:not(.emoji){
+    max-width: 400px;
     margin: auto;
     display: block;
   }
