@@ -2,6 +2,7 @@
 layout: post
 title: 'When in Japan :airplane: :jp: :sushi: :ramen: :tokyo_tower:'
 tags: [self, travel, japan]
+show_image_url: 'https://drive.google.com/uc?export=view&id=0BzzUFuhnnJrWbmlzcnREMFdKZ28'
 ---
 
 Last month I had the chance to visit Japan courtesy of a company gathering held in Tokyo. The event

@@ -7,7 +7,17 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   {% seo %}
-  <meta property="og:image" content="{{ site.url }}{% asset_path 'dubai-buildings.jpg' %}">
+  {% if page.show_image_url %}
+    <meta content="{{ page.show_image_url }}" property="og:image">
+  {% else %}
+    <meta property="og:image" content="{{ site.url }}{% asset_path 'dubai-buildings.jpg' %}">
+  {% endif %}
+
+  {% if page.tags %}
+    {% for tag in page.tags %}
+      <meta content="{{ tag }}" property="article:tag">
+    {% endfor %}
+  {% endif %}
 
   {% stylesheet application %}
   {% javascript application %}
