@@ -64,6 +64,13 @@ section.main-section.about-section{
   background: url(asset_path('congruent_outline.png'));
 }
 
+section.main-section.me-image-section{
+  background: url(asset_path('me-banner.jpg'));
+  height: 800px;
+  background-size: cover;
+  background-position: center center;
+}
+
 /*
 section.main-section:nth-child(even){
   background: #eee;
