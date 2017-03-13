@@ -132,6 +132,10 @@ Blog page view
     & > img.emoji{
       margin-top: -12px;
     }
+
+    .meta > a:link, .meta > a:visited, .meta > a:hover, .meta > a:active{
+      color: black !important;
+    }
   }
 
   > .blog-content p {
