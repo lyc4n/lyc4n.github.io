@@ -2,7 +2,7 @@
   position: absolute;
   left: 0px;
   right: 0px;
-  height: 18px;
+  height: 20px;
   background: rgba(255,255,255, 0.3);
 
   ul.site-menu{
@@ -16,10 +16,11 @@
   }
   li.site-menu-item:not(:first-child):before{
     content: '~';
-    color: #909090;
+    font-weight: 900;
+    color: black;
   }
   a.site-menu-item-link{
-    color: black;
+    color: red;
     text-transform: lowercase;
   }
 
