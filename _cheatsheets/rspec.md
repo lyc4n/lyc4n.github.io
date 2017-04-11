@@ -16,8 +16,8 @@ ___
       it "calls the name of the author" do
         book   = Book.new()
         author = double(:author)
-        allow(:book).to receive(:author).and_return(:author)
-        allow(:author).to receive(:name).and_return("Murakami")
+        allow(book).to receive(:author).and_return(author)
+        allow(author).to receive(:name).and_return("Murakami")
 
         result = book.author_name
 
@@ -35,8 +35,8 @@ ___
       it "calls the name of the autor" do
         book   = Book.new()
         author = double(:author)
-        allow(:book).to receive(:author).and_return(:author)
-        expect(:author).to receive(:name).and_return("Murakami")
+        allow(book).to receive(:author).and_return(author)
+        expect(author).to receive(:name).and_return("Murakami")
 
         result = book.author_name
 
@@ -54,13 +54,13 @@ ___
       it "calls the name of the autor" do
         book   = Book.new()
         author = double(:author)
-        allow(:book).to receive(:author).and_return(:author)
-        allow(:author).to receive(:name).and_return("Murakami")
+        allow(book).to receive(:author).and_return(author)
+        allow(author).to receive(:name).and_return("Murakami")
 
         result = book.author_name
 
-        expect(:book).to have_received(:author).and_return(:author)
-        expect(:author).to have_received(:name).and_return("Murakami")
+        expect(book).to have_received(:author).and_return(author)
+        expect(author).to have_received(:name).and_return("Murakami")
         expect(result).to eq('Murakami')
       end
     end
