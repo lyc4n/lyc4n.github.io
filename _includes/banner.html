@@ -16,8 +16,18 @@
     <a href="/">
         <h1 class="site-title box-center">
           LYC4N.IO
+
           {% if include.subtitle %}
             <span class='site-subtitle'>{{ include.subtitle }}</span>
+          {% endif %}
+
+
+          {% if page.title == "me" %}
+            <p class="align-center">
+              <a href="#shoutout-section" class="main-section-scroller">
+                <i class="fa fa-chevron-circle-down fa-3x"></i>
+              </a>
+            </p>
           {% endif %}
         </h1>
     </a>

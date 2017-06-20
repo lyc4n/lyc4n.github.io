@@ -3,19 +3,31 @@ title: me
 layout: site
 fullbanner: true
 ---
-<section class="main-section shoutout-section">
+<section id="shoutout-section" class="main-section shoutout-section viewport-height">
   <div class="relative-wrapper">
     <div class="box-center avatar-container">
       <p class="align-center">
         {{ site.hello }}
         {{ site.pitch }}
       </p>
+      <p class="align-center">
+        <a href="#me-image-section" class="main-section-scroller">
+          <i class="fa fa-chevron-circle-down fa-3x"></i>
+        </a>
+      </p>
     </div>
   </div>
 </section>
-<section class="main-section me-image-section">
+<section id='me-image-section' class="main-section me-image-section viewport-height">
+  <div class="relative-wrapper">
+    <p class="align-center">
+      <a href="#action-list-section" class="main-section-scroller">
+        <i class="fa fa-chevron-circle-down fa-3x"></i>
+      </a>
+    </p>
+  </div>
 </section>
-<section class="main-section action-list-section">
+<section id="action-list-section" class="main-section action-list-section viewport-height">
   <div class="relative-wrapper">
     <ul class="action-list no-padding box-center">
       <li class="action-list-item">

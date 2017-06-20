@@ -1,3 +1,31 @@
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
 .avatar{
   width: 60px;
   height: auto;
@@ -50,7 +78,6 @@ section.main-section:not(:last-child){
 
 section.main-section.shoutout-section{
   color: white;
-  height: 450px;
   background: url(asset_path('footer_lodyas.png'));
 }
 
@@ -71,8 +98,15 @@ section.main-section.me-image-section{
   background-position: center center;
 }
 
-/*
-section.main-section:nth-child(even){
-  background: #eee;
+.main-section-scroller{
+  display: inline-block;
+  margin-top: 50px;
+  color: white !important;
+  animation: heartbeat 3s infinite;
 }
-*/
+
+.me-image-section .main-section-scroller,
+.site-header .main-section-scroller{
+  position: absolute;
+  bottom: 220px;
+}
