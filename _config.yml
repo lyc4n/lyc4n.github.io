@@ -28,7 +28,7 @@ collections:
     permalink: /cheatsheets/:path/
 paginate: 15
 paginate_path: "/page:num"
-gems:
+plugins:
   - jekyll-gist
   - jemoji
   - jekyll-paginate
