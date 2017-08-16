@@ -36,6 +36,7 @@ plugins:
   - jekyll-assets
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-archives
 gist:
   noscript: false
 jekyll-archives:
