@@ -165,10 +165,9 @@ Blog page view
 
   p code{
     font-size: 16px;
-    background: #eee;
+    background: rgba(234, 15, 15, 0.17);
     padding: 2px 2px;
-    border-radius: 5px;
-    color: violet;
+    color: black;
   }
 
   figure.highlight{
@@ -191,5 +190,10 @@ Blog page view
     border: 1px solid black;
     color: black;
     padding: 5px 10px;
+  }
+
+  blockquote{
+    border-left: 5px solid black;
+    padding-left: 10px;
   }
 }
