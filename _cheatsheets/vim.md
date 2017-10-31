@@ -28,3 +28,28 @@ ___
 3. Perform operations
 4. Again press "q" to end the macro
 5. Call the macro by pressing @ then the registered key
+
+
+## Find and Replace with confirmation
+
+___
+
+```vimscript
+:%s/old/new/gc
+```
+
+Where old is the string you want to replace and new would be the replacement
+
+
+## vim-surround
+
+___
+
+| key           | function      |
+| ------------- | ------------- |
+| cst           | change surrounding tag  |
+| dst           | delete surrounding tag  |
+| cit           | change innter tag  |
+| dit           | delete inner tag  |
+| ysst          | surround with tag  |
+| yss[          | surround with bracket  |
