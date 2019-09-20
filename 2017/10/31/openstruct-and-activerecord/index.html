@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>OpenStruct and ActiveRecord Combo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="My dev blog and stuffs :]">
+  <link rel="canonical" href="https://lyc4n.github.io/2017/10/31/openstruct-and-activerecord/">
+  <script src="https://rawgit.com/WeiChiaChang/Easter-egg/master/easter-eggs-collection.js"></script>
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>OpenStruct and ActiveRecord Combo | LYC4N.IO</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="OpenStruct and ActiveRecord Combo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is OpenStruct?" />
+<meta property="og:description" content="What is OpenStruct?" />
+<link rel="canonical" href="https://lyc4n.github.io/2017/10/31/openstruct-and-activerecord/" />
+<meta property="og:url" content="https://lyc4n.github.io/2017/10/31/openstruct-and-activerecord/" />
+<meta property="og:site_name" content="LYC4N.IO" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-31T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@leecanarias" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://lyc4n.github.io/2017/10/31/openstruct-and-activerecord/","dateModified":"2017-10-31T00:00:00+08:00","datePublished":"2017-10-31T00:00:00+08:00","headline":"OpenStruct and ActiveRecord Combo","mainEntityOfPage":{"@type":"WebPage","@id":"https://lyc4n.github.io/2017/10/31/openstruct-and-activerecord/"},"description":"What is OpenStruct?","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+    <meta property="og:image" content="https://lyc4n.github.io/assets/dubai-buildings-1e4db15d7861e971e682d39c1a251ca09947d87f31ed8f50e60f7dbb0787640f.jpg">
+  
+
+  
+    
+      <meta content="ruby" property="article:tag">
+    
+      <meta content="activerecord" property="article:tag">
+    
+      <meta content="techniques" property="article:tag">
+    
+  
+
+  <link type="text/css" rel="stylesheet" href="/assets/application-508a0b882c36c588cefcc9cb0bdbf0196eb7edbde5602e172efa354cec6a5b55.css">
+  <script type="text/javascript" src="/assets/application-6688d847d6f68ff8d4b8f53c80bc6f4744983a8bb1afb3432c297a8f93dd38ee.js"></script>
+
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76509321-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+</head>
+
+  <body>
+    <header class="site-header ">
+  <div class="relative-wrapper">
+    <nav class="site-menu-container">
+      <ul class="site-menu">
+        <li class="site-menu-item">
+          <a class="site-menu-item-link" href="/">Blog</a>
+</li>
+        <li class="site-menu-item">
+          <a class="site-menu-item-link" href="/cheatsheets">Cheatsheets</a>
+</li>
+        <li class="site-menu-item">
+          <a class="site-menu-item-link" href="/me">Me</a>
+</li>
+        <li class="site-menu-item">
+          <a class="site-menu-item-link" href="/tic_tac">Tic-tac</a>
+</li>
+        <li class="site-menu-item">
+          <a class="site-menu-item-link" target="_blank" href="https://www.youtube.com/channel/UCpdhx8ZMpO8gDWh3VKHRJTw">Videos</a>
+</li>
+      </ul>
+
+    </nav>
+    <a href="/">
+        <h1 class="site-title box-center">
+          LYC4N.IO
+
+          
+
+
+          
+        </h1>
+    </a>
+  </div>
+</header>
+
+    <main class="page-content  box ">
+      <div class="blog box-item">
+  <header class="blog-header">
+    <h1 class="blog-title">OpenStruct and ActiveRecord Combo</h1>
+    <p class="meta small-text-size">
+      <i class="fa fa-calendar-o"></i> <a href="">October 31, 2017</a>
+       | 
+      <i class="fa fa-user"></i> <a href="/me">Norly Canarias <span class="red">♥</span></a>
+    </p>
+  </header>
+
+  <article class="blog-content">
+  <p><strong>What is OpenStruct?</strong></p>
+
+<blockquote>
+  <p>An OpenStruct is a data structure, similar to a Hash, that allows the definition of arbitrary attributes with their  <br>
+accompanying values. This is accomplished by using Ruby’s metaprogramming to define methods on the class itself.
+— from <a href="http://ruby-doc.org/stdlib-2.0.0/libdoc/ostruct/rdoc/OpenStruct.html">ruby-doc</a></p>
+</blockquote>
+
+<p>Here is it’s basic usage</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'ostruct'</span>
+<span class="n">dog</span> <span class="o">=</span> <span class="no">OpenStruct</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">dog</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s1">'Snoop'</span>
+<span class="n">dog</span><span class="p">.</span><span class="nf">age</span>  <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nb">puts</span> <span class="n">dog</span><span class="p">.</span><span class="nf">name</span> <span class="c1"># =&gt; 'Snoop'</span>
+<span class="nb">puts</span> <span class="n">dog</span><span class="p">.</span><span class="nf">age</span>  <span class="c1"># =&gt;  1</span>
+</code></pre></div></div>
+
+<p>You can also inherit from it</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'ostruct'</span>
+
+<span class="k">class</span> <span class="nc">Dog</span> <span class="o">&lt;</span> <span class="no">OpenStruct</span>
+<span class="k">end</span>
+
+<span class="n">dog</span> <span class="o">=</span> <span class="no">Dog</span><span class="p">.</span><span class="nf">new</span><span class="p">({</span><span class="ss">name: </span><span class="s1">'Brownie'</span><span class="p">,</span> <span class="ss">age: </span><span class="mi">2</span><span class="p">})</span>
+<span class="nb">puts</span> <span class="n">dog</span><span class="p">.</span><span class="nf">name</span> <span class="c1"># =&gt; 'Snoop'</span>
+<span class="nb">puts</span> <span class="n">dog</span><span class="p">.</span><span class="nf">age</span>  <span class="c1"># =&gt;  2</span>
+</code></pre></div></div>
+
+<p><strong>Rails ActiveRecord</strong></p>
+
+<p>You probably know what is <a href="http://guides.rubyonrails.org/active_record_basics.html#what-is-active-record-questionmark">Rails ActiveRecord</a> so we will move to the interesting part which is querying using raw sql statements. Yes, ActiveRecord provides <code class="highlighter-rouge">find_by_sql</code> but something deeper lies the <code class="highlighter-rouge">exec_query</code>. <code class="highlighter-rouge">exec_query</code> is a method you can call on ActiveRecord’s connection adapter:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">.</span><span class="nf">connection</span><span class="p">.</span><span class="nf">class</span> <span class="o">=&gt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">ConnectionAdapters</span><span class="o">::</span><span class="no">Mysql2Adapter</span>
+</code></pre></div></div>
+
+<p>So, the ActiveRecord::Base.connection returns an instance of <code class="highlighter-rouge">ActiveRecord::ConnectionAdapters::Mysql2Adapter</code> and it can change depending on what database you will be using. That adapter has the <code class="highlighter-rouge">exec_query</code> method which can be used to perform raw queries like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">results</span> <span class="o">=</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">.</span><span class="nf">connection</span><span class="p">.</span><span class="nf">exec_query</span><span class="p">(</span><span class="s1">'Select * from users limit 2'</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">results</span><span class="p">.</span><span class="nf">class</span> <span class="c1"># =&gt; ActiveRecord::Result</span>
+<span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Result</span><span class="p">.</span><span class="nf">ancestors</span> <span class="c1"># [... Enumerable ...]</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">exec_query</code> takes in the query which is a string then returns an instance of <code class="highlighter-rouge">ActiveRecord::Result</code>. <code class="highlighter-rouge">ActiveRecord::Result</code> inherits from a number of classes and modules including the <code class="highlighter-rouge">Enumerable</code> module which means it behaves like an array and enumerates row results which are represented by Hash.</p>
+
+<p>Here we print out each of the hash contained in the result</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">results</span> <span class="o">=</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">.</span><span class="nf">connection</span><span class="p">.</span><span class="nf">exec_query</span><span class="p">(</span><span class="s1">'Select id, name from users limit 2'</span><span class="p">)</span>
+<span class="n">results</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">result</span>
+<span class="k">end</span>
+
+<span class="c1"># =&gt; {'id'=&gt;1, 'name'=&gt;'user1'}</span>
+<span class="c1"># =&gt; {'id'=&gt;2, 'name'=&gt;"user2'}</span>
+</code></pre></div></div>
+
+<p><strong>Finally, the combo</strong></p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PersonnelSalesReport</span> <span class="o">&lt;</span> <span class="no">OpenStruct</span>
+   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">initialize_collection</span><span class="p">(</span><span class="n">attributes_list</span><span class="p">)</span>
+     <span class="n">attributes_list</span><span class="p">.</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">attributes</span><span class="o">|</span>
+       <span class="no">PersonnelSalesReport</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">attributes</span><span class="p">)</span>
+     <span class="k">end</span>
+   <span class="k">end</span>
+   
+   <span class="k">def</span> <span class="nf">foo</span>
+     <span class="c1"># ...</span>
+   <span class="k">end</span>
+   
+   <span class="k">def</span> <span class="nf">bar</span>
+     <span class="c1"># ...</span>
+   <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PersonnelSalesReportsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">show</span>
+     <span class="n">query</span>   <span class="o">=</span> <span class="n">build_complex_query</span>
+     <span class="n">results</span> <span class="o">=</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">.</span><span class="nf">connection</span><span class="p">.</span><span class="nf">exec_query</span><span class="p">(</span><span class="s1">'Select * from users limit 2'</span><span class="p">)</span>
+     <span class="vi">@personnel_sales_report</span> <span class="o">=</span> <span class="no">PersonnelSalesReport</span><span class="p">.</span><span class="nf">initialize_collection</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+  </article>
+  
+    <section class="blog-tag-section">
+      <p>Tags:</p>
+      <ul class="blog-tag-list">
+        
+          <li class="blog-tag-list-item">
+            <a class="blog-tag-list-item-link" target="_blank" href="/tag/ruby">ruby</a>
+          </li>
+        
+          <li class="blog-tag-list-item">
+            <a class="blog-tag-list-item-link" target="_blank" href="/tag/activerecord">activerecord</a>
+          </li>
+        
+          <li class="blog-tag-list-item">
+            <a class="blog-tag-list-item-link" target="_blank" href="/tag/techniques">techniques</a>
+          </li>
+        
+      </ul>
+      <div class="clearfix"></div>
+    </section>
+  
+
+</div>
+
+    </main>
+    <footer>
+  
+    <div class="me">
+      <img src="/assets/me-fc2fe21d838fc86a72dfe5737cafbefbd017710eae030b910e010b57362e485b.jpg" class="avatar" alt="me" width="100" height="100">
+
+      <div class="about small-text-size">
+        <p>Hi! I'm <a href="/me" class="white"><b>Norly Canarias</b></a>, a Web Developer specializing Ruby on Rails and looking forward to explore Node.js and Python among other stuffs!</p>
+        <ul class="online-pages inline-list clearleft no-padding">
+          <li>
+            <a href="http://www.github.com/lyc4n" target="_blank" alt="Test">
+              <img src="/assets/social/github-6b4582ced3c5b039423243207f470dcba7288918131657f89e9bdcada6fa8a40.png" class="social-icon" width="32" height="32" alt="social/github.png">
+            </a>
+          </li>
+          <li>
+            <a href="http://www.twitter.com/leecanarias" target="_blank" alt="On twitter">
+              <img src="/assets/social/twitter-d62b2f9cdbdbc3de3b69985d2dfc30e1e1459168b2e0af12a11589220061b000.png" class="social-icon" width="29" height="24" alt="social/twitter.png">
+            </a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/u/0/110185628938156012145" target="_blank" alt="On google plus">
+              <img src="/assets/social/g+29-95c1108ebb2520760bd441ca5a676735e0e13ebaf97fc0bf0205596b438c1c42.png" class="social-icon" width="29" height="29" alt="social/g+29.png">
+            </a>
+          </li>
+          <li>
+            <a href="http://www.facebook.com/canariasnorly" target="_blank" alt="On facebook">
+              <img src="/assets/social/fb-f8b5493c81354b6757a21bea6baedd5665b8cb9ca19a6ff4fbd40afef534f35f.png" class="social-icon" width="29" height="29" alt="social/fb.png">
+            </a>
+          </li>
+        </ul>
+    </div>
+  
+  <div class="clearfix"></div>
+
+
+  </div></footer></body>
+</html>
